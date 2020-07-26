@@ -8,13 +8,15 @@ import { DefaultModule } from './layouts/default/default.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './layouts/login/login.component';
 
 
-const modules = [
+const modulesList = [
   MatCardModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatDialogModule
 ];
 
 @NgModule({
@@ -27,11 +29,11 @@ const modules = [
     AppRoutingModule,
     BrowserAnimationsModule,
     DefaultModule,
-    modules
+    modulesList
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: modules,
+  exports: modulesList,
   schemas: [],
 })
 export class AppModule { }

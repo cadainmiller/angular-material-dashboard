@@ -10,9 +10,7 @@ import { TitleCasePipe } from '@angular/common';
 })
 export class EmployeesListComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) {
-
-  }
+  constructor(private dialog: MatDialog) { }
   ngOnInit(): void {
   }
 

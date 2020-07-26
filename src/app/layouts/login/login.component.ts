@@ -1,5 +1,8 @@
 import { Input, Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
+import { ForgotPasswordComponent } from '../../shared/dialog/forgot-password/forgot-password.component'
 
 @Component({
   selector: 'app-login',
@@ -8,7 +11,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -26,5 +29,13 @@ export class LoginComponent implements OnInit {
   @Input() error: string | null;
 
   @Output() submitEM = new EventEmitter();
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = false;
+    dialogConfig.width = "50%";
+    this.dialog.open(ForgotPasswordComponent, dialogConfig);
+  }
 
 }
