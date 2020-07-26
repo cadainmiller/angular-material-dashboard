@@ -12,6 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatDialogModule } from "@angular/material/dialog";
 
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -19,10 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AreaComponent } from './widgets/area/area.component';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
-import { MatBadgeModule } from '@angular/material/badge';
-
-
-
+import { ModalComponent } from './dialog/modal/modal.component';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -31,6 +30,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     AreaComponent,
     CardComponent,
     PieComponent,
+    ModalComponent,
+
   ],
   imports: [
     CommonModule,
@@ -42,6 +43,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatMenuModule,
     MatListModule,
     MatBadgeModule,
+    MatDialogModule,
     FlexLayoutModule,
     HighchartsChartModule
   ],
@@ -51,7 +53,10 @@ import { MatBadgeModule } from '@angular/material/badge';
     FooterComponent,
     AreaComponent,
     CardComponent,
-    PieComponent
-  ]
+    PieComponent,
+    ModalComponent,
+
+  ],
+  entryComponents: [ModalComponent]
 })
 export class SharedModule { }

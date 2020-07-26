@@ -1,78 +1,81 @@
 <div>
 
-    <h3>Very slow animation</h3>
+    <h1>View Employees</h1>
     <mat-tab-group animationDuration="1000ms">
         <mat-tab label="Company 1">
             <br>
-            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
-                <mat-card fxFlex="35">
-                    <div fxFlex="40">
-                        <div class="employee-list-card">
-                            <img src="https://images.assetsdelivery.com/compings_v2/nexusby/nexusby1810/nexusby181000301.jpg"
-                                alt="">
-                        </div>
-                    </div>
-                    <div fxFlex="60">
-                        <div class="employee-list-card ">
-                            <div class="header test">
-                                <h2 class="no-padding-bottom">Jane Doe</h2>
-                                <p>
-                                    <span class=""> Company Name</span> <br>
-                                    <span> testemail@gmail.com</span> <br>
-                                    <span> +123-456-7890</span>
-                                </p>
+            <mat-card>
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+                    <mat-card fxFlex="35">
+                        <div fxFlex="40">
+                            <div class="employee-list-card">
+                                <img src="https://images.assetsdelivery.com/compings_v2/nexusby/nexusby1810/nexusby181000301.jpg"
+                                    alt="">
                             </div>
                         </div>
-                    </div>
-                </mat-card>
+                        <div fxFlex="60">
+                            <div class="employee-list-card ">
+                                <div class="header test">
+                                    <h2 class="no-padding-bottom">Jane Doe</h2>
+                                    <p>
+                                        <span class=""> Company Name</span> <br>
+                                        <span> testemail@gmail.com</span> <br>
+                                        <span> +123-456-7890</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
 
-                <mat-card fxFlex="35">
-                    <div fxFlex="40">
-                        <div class="employee-list-card">
-                            <img src="https://images.assetsdelivery.com/compings_v2/nexusby/nexusby1810/nexusby181000301.jpg"
-                                alt="">
-                        </div>
-                    </div>
-                    <div fxFlex="60">
-                        <div class="employee-list-card ">
-                            <div class="header test">
-                                <h2 class="no-padding-bottom">Jane Doe</h2>
-                                <p>
-                                    <span class=""> Company Name</span> <br>
-                                    <span> testemail@gmail.com</span> <br>
-                                    <span> +123-456-7890</span>
-                                </p>
+                    <mat-card fxFlex="35">
+                        <div fxFlex="40">
+                            <div class="employee-list-card">
+                                <img src="https://images.assetsdelivery.com/compings_v2/nexusby/nexusby1810/nexusby181000301.jpg"
+                                    alt="">
                             </div>
                         </div>
-                    </div>
-                </mat-card>
+                        <div fxFlex="60">
+                            <div class="employee-list-card ">
+                                <div class="header test">
+                                    <h2 class="no-padding-bottom">Jane Doe</h2>
+                                    <p>
+                                        <span class=""> Company Name</span> <br>
+                                        <span> testemail@gmail.com</span> <br>
+                                        <span> +123-456-7890</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
 
-                <mat-card fxFlex="35">
-                    <div fxFlex="40">
-                        <div class="employee-list-card">
-                            <img src="https://images.assetsdelivery.com/compings_v2/nexusby/nexusby1810/nexusby181000301.jpg"
-                                alt="">
-                        </div>
-                    </div>
-                    <div fxFlex="60">
-                        <div class="employee-list-card ">
-                            <div class="header test">
-                                <h2 class="no-padding-bottom">Jane Doe</h2>
-                                <p>
-                                    <span class=""> Company Name</span> <br>
-                                    <span> testemail@gmail.com</span> <br>
-                                    <span> +123-456-7890</span>
-                                </p>
+                    <mat-card fxFlex="35">
+                        <div fxFlex="40">
+                            <div class="employee-list-card">
+                                <img src="https://images.assetsdelivery.com/compings_v2/nexusby/nexusby1810/nexusby181000301.jpg"
+                                    alt="">
                             </div>
                         </div>
-                    </div>
-                </mat-card>
-            </div>
+                        <div fxFlex="60">
+                            <div class="employee-list-card ">
+                                <div class="header test">
+                                    <h2 class="no-padding-bottom">Jane Doe</h2>
+                                    <p>
+                                        <span class=""> Company Name</span> <br>
+                                        <span> testemail@gmail.com</span> <br>
+                                        <span> +123-456-7890</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </mat-card>
+
         </mat-tab>
         <mat-tab label="Company 2">Content 2</mat-tab>
         <mat-tab label="Company 3">Content 3</mat-tab>
     </mat-tab-group>
-    <button (click)="openDialog()" class="add-new" mat-fab color="primary">
+    <button (click)='openDialog()' class="add-new" mat-fab color="primary">
         <mat-icon>add</mat-icon>
     </button>
 </div>

@@ -25,6 +25,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 
 
+
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -53,6 +54,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   providers: [
     DashboardService
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
 export class DefaultModule { }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ModalComponent } from '../../shared/dialog/modal/modal.component'
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-employees-list',
@@ -7,13 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesListComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {
 
-  openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
   }
-
   ngOnInit(): void {
   }
 
+  openDialog() {
+    this.dialog.open(ModalComponent);
+  }
 }
