@@ -14,6 +14,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -44,7 +47,10 @@ import { ModalComponent } from './dialog/modal/modal.component';
     MatListModule,
     MatBadgeModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
     FlexLayoutModule,
+    MatGridListModule,
     HighchartsChartModule
   ],
   exports: [

@@ -17,6 +17,10 @@ export class EmployeesListComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(ModalComponent);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
+    this.dialog.open(ModalComponent, dialogConfig);
   }
 }
