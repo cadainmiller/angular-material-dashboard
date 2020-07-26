@@ -8,6 +8,7 @@ import { DefaultModule } from './layouts/default/default.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { LoginComponent } from './layouts/login/login.component';
 
 
 const modules = [
@@ -19,6 +20,7 @@ const modules = [
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
