@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { ModalComponent } from '../../shared/dialog/modal/modal.component'
+import { ModalComponent } from '../../shared/dialog/modal/modal.component';
 import { TitleCasePipe } from '@angular/common';
 
 @Component({
