@@ -23,4 +23,11 @@ export class EmployeesListComponent implements OnInit {
     dialogConfig.width = "60%";
     this.dialog.open(ModalComponent, dialogConfig);
   }
+  
 }
+
+setTimeout(() => {
+  window.dispatchEvent(
+    new Event('resize')
+  );
+}, 300);
