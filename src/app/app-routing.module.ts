@@ -5,6 +5,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
 import { EmployeesListComponent } from './modules/employees-list/employees-list.component';
 import { LoginComponent } from './layouts/login/login.component';
+import { TestingComponent } from './layouts/testing/testing.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'test',
+    component: TestingComponent,
   }
 ];
 
