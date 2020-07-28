@@ -1,32 +1,17 @@
+
 :host {
-    display: flex;
     justify-content: center;
     margin: 40px 0px;
     padding-top: 5%;
   }
+.padding-top {
+  padding-top: 15%;
+  padding-left: 33%;
+}
 
-  .mat-form-field {
-    width: 100%;
-    min-width: 600px;
-  }
+.card {
+  padding: 20px;
+}
 
-  mat-card-title,
-  mat-card-content {
-    display: flex;
-    justify-content: center;
-  }
 
-  .error {
-    padding: 16px;
-    width: 300px;
-    color: white;
-  }
-
-  .button {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  a {
-      color: blue;
-  }
+  

@@ -1,26 +1,26 @@
-<mat-card>
-    <mat-card-title>Login</mat-card-title>
-    <mat-card-content>
-        <form (ngSubmit)="submit()">
-            <p>
-                <mat-form-field>
-                    <input type="text" matInput placeholder="Username" formControlName="username">
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field>
-                    <input type="password" matInput placeholder="Password" formControlName="password">
-                </mat-form-field>
-            </p>
-            <p *ngIf="error" class="error">
-                {{ error }}
-            </p>
-            <p>
-                <a (click)="openDialog()" target="_blank" rel="noopener noreferrer">Forgot Password?</a>
-            </p>
-            <div class="button">
-                <button type="submit" mat-button>Login</button>
+<div class="row padding-top">
+    <div class="col s12 m7 ">
+        <div class="card">
+            <div class="row center">
+                <h2>Login</h2>
             </div>
-        </form>
-    </mat-card-content>
-</mat-card>
+            <form (ngSubmit)="submit()">
+                <p>
+                    <input type="text" matInput placeholder="Username" formControlName="username">
+                </p>
+                <p>
+                    <input type="password" matInput placeholder="Password" formControlName="password">
+                </p>
+                <p *ngIf="error" class="error">
+                    {{ error }}
+                </p>
+                <p>
+                    <a (click)="openDialog()" target="_blank" rel="noopener noreferrer">Forgot Password?</a>
+                </p>
+                <div class="button">
+                    <button type="submit" mat-button>Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

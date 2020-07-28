@@ -17,6 +17,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -51,6 +52,7 @@ import { ForgotPasswordComponent } from './dialog/forgot-password/forgot-passwor
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatCardModule,
     FlexLayoutModule,
     MatGridListModule,
     HighchartsChartModule
