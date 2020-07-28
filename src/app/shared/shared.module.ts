@@ -26,7 +26,8 @@ import { AreaComponent } from './widgets/area/area.component';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import { ModalComponent } from './dialog/modal/modal.component';
-
+import { ForgotPasswordComponent } from './dialog/forgot-password/forgot-password.component';
+import { EmployeeTableComponent } from './widgets/employee-table/employee-table.component';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -36,6 +37,8 @@ import { ModalComponent } from './dialog/modal/modal.component';
     CardComponent,
     PieComponent,
     ModalComponent,
+    EmployeeTableComponent,
+    ForgotPasswordComponent
 
   ],
   imports: [
@@ -64,6 +67,8 @@ import { ModalComponent } from './dialog/modal/modal.component';
     CardComponent,
     PieComponent,
     ModalComponent,
+    EmployeeTableComponent,
+    ForgotPasswordComponent
   ],
   entryComponents: [ModalComponent]
 })
