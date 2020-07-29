@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -57,6 +58,7 @@ import { EmployeeTableComponent } from './widgets/employee-table/employee-table.
     MatCardModule,
     FlexLayoutModule,
     MatGridListModule,
+    MatTableModule,
     HighchartsChartModule
   ],
   exports: [
