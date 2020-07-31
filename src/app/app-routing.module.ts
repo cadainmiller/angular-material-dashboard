@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
 import { EmployeesListComponent } from './modules/employees-list/employees-list.component';
 import { LoginComponent } from './layouts/login/login.component';
+import { AuthGuard } from 'src/app/shared/auth.guard';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
-    path: '',
+    path: 'dash',
     component: DefaultComponent,
     children: [
       {
@@ -19,13 +20,13 @@ const routes: Routes = [
       {
         path: 'posts',
         component: PostComponent,
-        canActivate: [AuthGuard],
       },
       {
         path: 'elist',
         component: EmployeesListComponent,
-      }
-    ]
+      },
+    ],
+    canActivate: [AuthGuard],
   },
   {
     path: 'login',
@@ -35,6 +36,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

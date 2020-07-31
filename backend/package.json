@@ -1,23 +1,24 @@
 {
-  "name": "backend",
+  "name": "node-token-based-authentication",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A node token token-based user authentication REST API",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "json:server": "json-server --watch db.json"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Digamber",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-jwt": "^6.0.0",
-    "json-server": "^0.16.1",
+    "express-validator": "^6.2.0",
     "jsonwebtoken": "^8.5.1",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "mongoose": "^5.7.3",
+    "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

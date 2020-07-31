@@ -23,6 +23,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MatTableModule } from '@angular/material/table';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from 'src/app/shared/authconfig.interceptor';
 
 const modulesList = [
   MatCardModule,
@@ -43,24 +45,24 @@ const modulesList = [
   FlexLayoutModule,
   MatGridListModule,
   MatTableModule,
-  HighchartsChartModule
+  HighchartsChartModule,
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-  ],
+  declarations: [AppComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DefaultModule,
-    modulesList
+    HttpClientModule,
+    modulesList,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
   exports: modulesList,
   schemas: [],
 })
-export class AppModule { }
+export class AppModule {}
