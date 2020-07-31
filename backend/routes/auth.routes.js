@@ -4,9 +4,12 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const router = express.Router();
+const dbConfig = require("../database/db");
+const mongoose = require("mongoose");
 const userSchema = require("../models/User");
 const authorize = require("../middlewares/auth");
 const { check, validationResult } = require("express-validator");
+const { assert } = require("console");
 
 router.post("/add", (req, res) => {
   const user = new userSchema({
@@ -15,10 +18,12 @@ router.post("/add", (req, res) => {
     password: req.body.password,
   });
   var myData = user;
-  console.log(myData);
-  myData.save(function (err, book) {
-    if (err) return console.error(err);
-    console.log("saved to collection.");
+  mongoose.connect(dbConfig.mongodb.dbURI, function (err, db) {
+    assert.equal(null, err);
+    db.collection("users").insetOne(user, function (err, result) {
+      assert.equal(null, err);
+      console.log("User Added");
+    });
   });
 });
 
