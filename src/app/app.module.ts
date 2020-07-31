@@ -25,7 +25,8 @@ import { MatTableModule } from '@angular/material/table';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from 'src/app/shared/authconfig.interceptor';
-
+import { SignupComponent } from './layouts/signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const modulesList = [
   MatCardModule,
   MatInputModule,
@@ -49,12 +50,14 @@ const modulesList = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, SignupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DefaultModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     modulesList,
   ],

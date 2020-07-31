@@ -6,6 +6,7 @@ import { PostComponent } from './modules/post/post.component';
 import { EmployeesListComponent } from './modules/employees-list/employees-list.component';
 import { LoginComponent } from './layouts/login/login.component';
 import { AuthGuard } from 'src/app/shared/auth.guard';
+import { SignupComponent } from 'src/app/layouts/signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
   },
 ];
 
