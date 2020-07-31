@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
       {
         path: 'posts',
         component: PostComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'elist',

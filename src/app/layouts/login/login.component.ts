@@ -1,5 +1,7 @@
 import { Input, Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 import { ForgotPasswordComponent } from '../../shared/dialog/forgot-password/forgot-password.component'
@@ -11,8 +13,7 @@ import { ForgotPasswordComponent } from '../../shared/dialog/forgot-password/for
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) { }
-
+  constructor(private dialog: MatDialog, private authService: AuthService, private router: Router) { }
   ngOnInit(): void {
   }
 
@@ -24,8 +25,15 @@ export class LoginComponent implements OnInit {
   submit() {
     if (this.form.valid) {
       this.submitEM.emit(this.form.value);
+      this.authService.validate(this.form.value.username, this.form.value.password)
+        .then((response) => {
+          this.authService.setUserInfo({ 'user': response['user'] });
+          this.router.navigate(['home']);
+        })
     }
   }
+
+
   @Input() error: string | null;
 
   @Output() submitEM = new EventEmitter();
@@ -39,3 +47,4 @@ export class LoginComponent implements OnInit {
   }
 
 }
+

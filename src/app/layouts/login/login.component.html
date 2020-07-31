@@ -4,7 +4,7 @@
             <div class="row center">
                 <h2>Login</h2>
             </div>
-            <form (ngSubmit)="submit()">
+            <form>
                 <p>
                     <input type="text" matInput placeholder="Username" formControlName="username">
                 </p>
@@ -18,7 +18,7 @@
                     <a (click)="openDialog()" target="_blank" rel="noopener noreferrer">Forgot Password?</a>
                 </p>
                 <div class="button">
-                    <button type="submit" mat-button>Login</button>
+                    <button (click)="submit()" mat-button>Login</button>
                 </div>
             </form>
         </div>
