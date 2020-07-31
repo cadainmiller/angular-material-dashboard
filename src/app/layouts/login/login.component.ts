@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 import { ForgotPasswordComponent } from '../../shared/dialog/forgot-password/forgot-password.component'
+import { FakeService } from 'src/app/services/fake.service'
+import { Users } from 'src/app/model/User';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +14,18 @@ import { ForgotPasswordComponent } from '../../shared/dialog/forgot-password/for
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private dialog: MatDialog,) { }
+  constructor(private dialog: MatDialog, private fs : FakeService) { }
   ngOnInit(): void {
+    this.fs.getUsers().subscribe
+    (
+      (response)=>
+      {
+        console.log(response)
+      },
+      (error) => console.log(error)
+    )
   }
+  
 
   form: FormGroup = new FormGroup({
     username: new FormControl(''),
