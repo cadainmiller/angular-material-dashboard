@@ -1,4 +1,5 @@
 # BillyCraigV2
+### This Program is dead will be moving to PWA app version 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
